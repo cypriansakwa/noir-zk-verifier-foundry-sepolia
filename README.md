@@ -195,6 +195,7 @@ contract DeployScript is Script {
  Chain: 11155111 (Sepolia)
  Gas used: 6136249
  ```
+ If you want to see and intract with your deployed contract, paste the deployment address your browser as   https://sepolia.etherscan.io/address/<address> (e.g https://sepolia.etherscan.io/address/0x3e96C09d2361d27D577f18BD20Aa5A86CB313AB0)
 ## 🧪 VerifyProof Test Contract — `test/VerifyProof.t.sol`
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -227,10 +228,11 @@ contract VerifyProofTest is Test {
   jq '.compiler.version' out/Verifier.sol/HonkVerifier.json
   ```
   Then run:
+  
   ```bash
    forge verify-contract \
-  0xYOUR_DEPLOYED_ADDRESS \
-  ./src/Verifier.sol:HonkVerifier \
+   0xYOUR_DEPLOYED_ADDRESS \
+  ./Verifier.sol:HonkVerifier \
   --chain sepolia \
   --compiler-version v0.8.30+commit.73712a01 \
   --num-of-optimizations 200 \
