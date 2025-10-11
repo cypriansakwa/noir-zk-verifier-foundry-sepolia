@@ -168,3 +168,58 @@ forge script script/StoreInteraction.s.sol:StoreInteraction \
   --broadcast -vvvv
 
 ```
+### 🧾 What Happens
+
+Foundry compiles and submits an on-chain transaction.
+
+`verifyAndStore()` updates:
+
+- `lastVerification`
+- `lastPublicInputs`
+
+Emits `ProofVerified(result)` event.  
+Logs show: `verifyAndStore` returned: **true**
+
+---
+
+### 🔍 8. View Results on Etherscan
+
+After the transaction is mined:
+
+- `lastVerification = true`
+- Event: `ProofVerified(true)`
+
+👉 View directly on [Sepolia Etherscan](https://sepolia.etherscan.io)
+
+---
+
+### 🧩 9. Summary
+
+- Deploying a Noir ZK verifier is only the first step.
+- Foundry automates both **read** and **write** interactions.
+- Use `verify()` for local verification (no gas).
+- Use `verifyAndStore()` for on-chain recordkeeping.
+- Inspect contract state and logs directly on Etherscan.
+
+---
+
+### 📚 References
+
+- [Noir ZK Language](https://noir-lang.org)
+- [Foundry Documentation](https://book.getfoundry.sh)
+- [Ethereum Sepolia Testnet](https://sepolia.etherscan.io)
+- [zkSNARKs Overview (ZoKrates)](https://zokrates.github.io)
+
+---
+
+### 👨🏽‍🏫 Contact & Credits
+
+**Instructor:** Dr. Cyprian Omukhwaya Sakwa  
+Cryptography Instructor, Web3Clubs Foundation
+
+📧 Email: [cypriansakwa@gmail.com](mailto:cypriansakwa@gmail.com)  
+🐦 Twitter: [@cypriansakwaOm](https://twitter.com/cypriansakwaOm)  
+💻 GitHub: [cypriansakwa](https://github.com/cypriansakwa)
+
+⚠️ *Use only testnet keys and funds for all lessons.*
+
